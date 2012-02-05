@@ -3,6 +3,9 @@ html(lang='en')
   head
     != SocketStream
     script(src='../assets/js/bootstrap.js')
+    script(src='../assets/js/prettify.js')
+    link(href='../assets/css/prettify.css', rel='stylesheet')
+
 
     meta(charset='utf-8')
     title Bootstrap, from Twitter
@@ -24,7 +27,7 @@ html(lang='en')
   body
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container
+        .container-fluid
           a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
             span.icon-bar
             span.icon-bar
@@ -38,6 +41,9 @@ html(lang='en')
                 a(href='#about') About
               li
                 a(href='#contact') Contact
+            p.navbar-text.pull-right
+              a(href='#') Login
+
           //
             /.nav-collapse 
     .container
@@ -54,31 +60,46 @@ html(lang='en')
             .controls
             //-    input#myMessage.span12(autocomplete="off" placeholder="say something" autofocus="autofocus")
             html.
-                    <input class="span2" id="myMessage" type="text" autocomplete="off" placeholder="say something" autofocus="autofocus">
+              <input class="span2" id="myMessage" type="text" autocomplete="off" placeholder="say something" autofocus="autofocus">
           
       
       //
          Example row of columns 
       .row
         .span4
-          h2 Hello
+          h2 This
           p
             | This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
           p
             a.btn(href='#') View details »
         .span4
+          h2 SocketStream
+          p
+            pre.code.prettyprint.lang-js
+              | var html = require('html')
+              |     , ss = require('socketstream');
+              |   ss.client.define('main', {
+              |     view: 'app.jade',
+              |     css:  ['libs', 'app.styl'],
+              |     code: ['libs', 'modules', 'main']
+              |   });
+              |   ss.http.router.on('/', function(req, res) {
+              |     res.serve('main');
+              |   });
+              |   var server = http.Server(ss.http.middleware);
+              |   server.listen(3000);
+              |   ss.start(server);
+
+          p
+            a.btn(href='http://www.socketstream.org/') View details »
+        .span4
           h2 Bootstrap
           p
             a(href="http://twitter.github.com/bootstrap") http://twitter.github.com/bootstrap
-            |  was used to style this app.Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa  sit amet risus. Etiam porta sem.
+            |  was used to style this app. Bootstrap is a simple and flexible HTML, CSS, and Javascript framework for popular user interface components and interactions.
           p
             a.btn(href='http://twitter.github.com/bootstrap') View details »
-        .span4
-          h2 SocketStream
-          p
-            | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-          p
-            a.btn(href='http://www.socketstream.org/') View details »
+
       hr
       footer
         p © Company 2012
@@ -87,4 +108,9 @@ html(lang='en')
     // Le javascript
     // ================================================== 
     // Place more javascript at the end of the document so the pages load faster 
+
+
+    script(type='text/javascript')
+      $(function() {
+      prettyPrint();});
 
