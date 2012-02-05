@@ -9,14 +9,14 @@ ss.client.define('chat', {
   code: ['libs', 'modules', 'main']
 });
 
-// ss.session.store.use('redis', {redis: {host: 'localhost', port: 6379}});
-// ss.publish.transport.use('redis', {redis: {host: 'localhost', port: 6379}});
-
-ss.ws.transport.use('socketio')
-
 ss.http.router.on('/chat', function(req, res) {
   res.serve('chat');
 });
+
+ss.session.store.use('redis', {redis: {host: 'localhost', port: 6379}});
+ss.publish.transport.use('redis', {redis: {host: 'localhost', port: 6379}});
+
+ss.ws.transport.use('socketio');
 
 // Remove to use only plain .js, .html and .css files if you prefer
 ss.client.formatters.add(require('ss-coffee'));

@@ -11,11 +11,11 @@
     "ss-coffee": "0.1.x",
     "ss-stylus": "0.1.x",
     "ss-jade": "0.1.x",
-    "ss-hogan": "0.1.x",
-    "socketstream": "https://github.com/socketstream/socketstream.git#master"
+    "ss-hogan": "0.1.x"
+    
   },
   "subdomain": "scrips",
   "scripts": {
-    "start": "node app.js"
+    "start": "app.js"
   }
 }
