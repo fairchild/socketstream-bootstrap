@@ -6,15 +6,13 @@ var http = require('http')
 ss.client.define('chat', {
   view: 'chat.jade',
   css:  ['libs', 'chat.styl'],
-  code: ['libs', 'modules', 'chat']
+  code: ['libs', 'modules', 'main']
 });
 
-ss.session.store.use('redis', {redis: {host: 'localhost', port: 6379}});
-ss.publish.transport.use('redis', {redis: {host: 'localhost', port: 6379}});
+// ss.session.store.use('redis', {redis: {host: 'localhost', port: 6379}});
+// ss.publish.transport.use('redis', {redis: {host: 'localhost', port: 6379}});
 
-ss.ws.transport.use('socketio', {io: function(io){
-  io.set('log_level', 4)
-}})
+ss.ws.transport.use('socketio')
 
 ss.http.router.on('/chat', function(req, res) {
   res.serve('chat');
