@@ -1,0 +1,153 @@
+!!! 5
+html(lang='en')
+  head
+    != SocketStream
+    meta(charset='utf-8')
+    title Bootstrap
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //Le HTML5 shim, for IE6-8 support of HTML elements 
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    
+    link(href='../assets/css/bootstrap.css', rel='stylesheet')
+    style(type='text/css')
+      body {
+      padding-top: 60px;
+      padding-bottom: 40px;
+      }
+      .sidebar-nav {
+      padding: 9px 0;
+      }
+    // fav and touch icons 
+    link(rel='shortcut icon', href='images/favicon.ico')
+    link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='images/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='images/apple-touch-icon-114x114.png')
+
+    script(src='../assets/js/bootstrap.js')
+
+
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#') Project name
+          .nav-collapse
+            ul.nav
+              li.active
+                a(href='#') Home
+              li
+                a(href='#about') About
+              li
+                a(href='#contact') Contact
+            p.navbar-text.pull-right
+              | Logged in as
+              a(href='#') username
+          //.nav-collapse 
+    .container-fluid
+      .row-fluid
+        .span3
+          .well.sidebar-nav
+            ul.nav.nav-list
+              li.nav-header Sidebar
+              li.active
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li.nav-header Sidebar
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li.nav-header Sidebar
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+              li
+                a(href='#') Link
+          //.well 
+        //span
+        .span9
+          .hero-unit
+            h1 Hello, world!
+            // QUICK CHAT DEMO
+            form#demo(onsubmit='return false')
+              h3 Quick Chat Demo
+              h5 Open this page in multiple tabs or browsers and type a message below
+              #chatlog
+              input(id='myMessage', type='text', autocomplete='off')
+
+            p
+              | This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+            p
+              a.btn.btn-primary.btn-large Learn more »
+          .row-fluid
+            .span4
+              h2 Heading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href='#') View details »
+            //span
+            .span4
+              h2 Heading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href='#') View details »
+            //span
+            .span4
+              h2 Heading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href='#') View details »
+            //span
+          //row
+          .row-fluid
+            .span4
+              h2 Heading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href='#') View details »
+            //span
+            .span4
+              h2 Heading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href='#') View details »
+            //span
+            .span4
+              h2 Heading
+              p
+                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href='#') View details »
+            //span
+          //row
+        //span
+      //row
+      hr
+      footer
+        p © Company 2012
+    //.fluid-container

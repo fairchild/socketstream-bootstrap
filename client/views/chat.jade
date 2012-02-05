@@ -1,0 +1,90 @@
+!!! 5
+html(lang='en')
+  head
+    != SocketStream
+    script(src='../assets/js/bootstrap.js')
+
+    meta(charset='utf-8')
+    title Bootstrap, from Twitter
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //
+       Le HTML5 shim, for IE6-8 support of HTML elements 
+    //if lt IE 9
+      script(src='../assets/js/html5.js')
+    style
+      body {
+      padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    link(href='../assets/css/bootstrap.css', rel='stylesheet')
+    link(rel='shortcut icon', href='images/favicon.ico')
+    link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='images/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='images/apple-touch-icon-114x114.png')
+  body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#') Project name
+          .nav-collapse
+            ul.nav
+              li.active
+                a(href='#') Home
+              li
+                a(href='#about') About
+              li
+                a(href='#contact') Contact
+          //
+            /.nav-collapse 
+    .container
+      //
+         Main hero unit for a primary marketing message or call to action 
+      #demo.hero-unit
+        // QUICK CHAT DEMO
+        p Open this page in multiple tabs or browsers and type a message below
+        
+        div#chatlog
+
+        form.form-inline.span12(onsubmit='return false')    
+          .control-group
+            .controls
+            //-    input#myMessage.span12(autocomplete="off" placeholder="say something" autofocus="autofocus")
+            html.
+                    <input class="span2" id="myMessage" type="text" autocomplete="off" placeholder="say something" autofocus="autofocus">
+          
+      
+      //
+         Example row of columns 
+      .row
+        .span4
+          h2 Hello
+          p
+            | This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+          p
+            a.btn(href='#') View details »
+        .span4
+          h2 Bootstrap
+          p
+            a(href="http://twitter.github.com/bootstrap") http://twitter.github.com/bootstrap
+            |  was used to style this app.Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa  sit amet risus. Etiam porta sem.
+          p
+            a.btn(href='http://twitter.github.com/bootstrap') View details »
+        .span4
+          h2 SocketStream
+          p
+            | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          p
+            a.btn(href='http://www.socketstream.org/') View details »
+      hr
+      footer
+        p © Company 2012
+    //container 
+
+    // Le javascript
+    // ================================================== 
+    // Place more javascript at the end of the document so the pages load faster 
+
