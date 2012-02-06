@@ -1,7 +1,7 @@
 {
   "name": "scrips",
   "description": "Boilerplate starting point for a socketstream app.",
-  "version": "0.0.1-15",
+  "version": "0.0.1-31",
   "author": "Me <me@mydomain.com>",
   "private": true,
   "engines": {
@@ -12,8 +12,9 @@
     "ss-stylus": "0.1.x",
     "ss-jade": "0.1.x",
     "ss-hogan": "0.1.x",
-    "authom": "0.3.x"
-    
+    "authom": "0.3.x",
+    "express": "2.5.x",
+    "socketstream": "git://github.com/socketstream/socketstream.git#master"
   },
   "subdomain": "scrips",
   "scripts": {

@@ -23,7 +23,7 @@ ss.event.on 'newMessage', (message) ->
 SocketStream.event.on 'ready', ->
   
   # Show the chat form and bind to the submit action
-  $('#demo').on 'submit', ->
+  $('#chat').on 'submit', ->
 
     # Grab the message from the text box
     text = $('#myMessage').val()

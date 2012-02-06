@@ -3,7 +3,7 @@
 # Send a message to the server
 exports.send = (text, cb) ->
   if valid(text)
-    ss.rpc('demo.sendMessage', text, cb)
+    ss.rpc('chat.sendMessage', text, cb)
   else
     cb(false)
 

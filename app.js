@@ -40,8 +40,8 @@ ss.client.define('chat', {
 //   res.serve('chat');
 // });
 
-ss.session.store.use('redis', {redis: {host: 'localhost', port: 6379}});
-ss.publish.transport.use('redis', {redis: {host: 'localhost', port: 6379}});
+// ss.session.store.use('redis', {redis: {host: 'localhost', port: 6379}});
+// ss.publish.transport.use('redis', {redis: {host: 'localhost', port: 6379}});
 
 ss.ws.transport.use('socketio');
 
